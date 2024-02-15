@@ -1,10 +1,10 @@
-import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
-import About from "./pages/About";
-import Albums from "./pages/Albums";
-import Events from "./pages/Events";
-import Donate from "./pages/Donate";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Blogs from "./pages/blogs/Blogs";
+import About from "./pages/about/About";
+import Albums from "./pages/albums/Albums";
+import Events from "./pages/events/Events";
+import Donate from "./pages/donate/Donate";
 import Layout from "./layouts/layout";
 
 const router = createBrowserRouter([
