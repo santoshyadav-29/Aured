@@ -38,7 +38,9 @@ function Story() {
         <div className="w-full md:w-1/2">
           <img
             className="mb-10 w-full h-[300px] lg:h-[350] object-cover rounded-2xl md:mb-0"
-            src="https://media.discordapp.net/attachments/830474921875734578/830484234057023499/image2.jpg?width=539&height=404"
+            src={`https://picsum.photos/seed/${Math.floor(
+              Math.random() * 1000
+            )}/800/600`}
             alt="story"
           />
         </div>
