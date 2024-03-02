@@ -1,4 +1,4 @@
-import Programs from "../../components/home/programs.tsx";
+import Programs from "../../components/home/Programs.tsx";
 import Reach from "../../components/home/Reach.tsx";
 import Story from "../../components/home/Story.tsx";
 import SwiperComp from "../../components/home/Swiper.tsx";
