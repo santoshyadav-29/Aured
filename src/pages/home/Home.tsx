@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="">
       <SwiperComp />
-      <div className="story p-2">
+      <div className="story p-4">
         <Programs />
         <Reach />
         <Story />
