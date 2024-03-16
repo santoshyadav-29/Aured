@@ -1,9 +1,7 @@
 import LeftArrow from "../../assets/left-arrow.svg";
 import RightArrow from "../../assets/right-arrow.svg";
-
-import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
+import * as react from "swiper/react";
+import { Autoplay, Navigation, Pagination, Scrollbar, Keyboard } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,19 +12,23 @@ import "swiper/css/scrollbar";
 function SwiperComp() {
   return (
     <section className="swiper">
-      <Swiper
+      <react.Swiper
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, Autoplay]}
+        modules={[Navigation, Pagination, Scrollbar, Autoplay, Keyboard]}
         spaceBetween={50}
         slidesPerView={1}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
+        keyboard={{
+          enabled: true,
+          onlyInViewport: false,
+        }}
         pagination={{ el: ".swiper-pagination", clickable: true }}
         scrollbar={{ el: ".swiper-scrollbar", draggable: true }}
       >
-        <SwiperSlide>
+        <react.SwiperSlide>
           <div
             style={{
               backgroundImage: `url('https://auraed.org/assets/images/slider/slider-01.jpg')`,
@@ -37,11 +39,11 @@ function SwiperComp() {
             className="swiper-slide bg-black bg-blend-overlay bg-opacity-40 relative h-[80vh] "
           >
             <div className="flex flex-col container pt-5 px-2 h-full md:px-0">
-              <div className="flex h-full flex-col text-white space-y-5 justify-center ">
+              <div className="flex h-full flex-col px-5 text-white space-y-5 justify-center ">
                 <h1 className="text-4xl max-w-5xl font-bold">
                   Support Children For Education
                 </h1>
-                <p className="text-md max-w-2xl">
+                <p className="text-md max-w-2xl ">
                   Only 84% of children attend school in Nepal because many
                   children leave school before their 11th birthday due to
                   various difficulties. It's a dutiful responsibility of ours
@@ -52,8 +54,8 @@ function SwiperComp() {
               </div>
             </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </react.SwiperSlide>
+        <react.SwiperSlide>
           <div
             style={{
               backgroundImage: `url('https://auraed.org/assets/images/slider/slider-02.jpg')`,
@@ -64,7 +66,7 @@ function SwiperComp() {
             className="swiper-slide bg-black bg-blend-overlay bg-opacity-40 relative h-[80vh]"
           >
             <div className="flex flex-col container mx-auto pt-5 px-2 h-full md:px-0">
-              <div className="flex h-full flex-col text-white space-y-5 justify-center">
+              <div className="flex h-full flex-col px-5 text-white space-y-5 justify-center">
                 <h1 className="text-4xl max-w-5xl font-bold">
                   Support Children For Education
                 </h1>
@@ -79,8 +81,8 @@ function SwiperComp() {
               </div>
             </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </react.SwiperSlide>
+        <react.SwiperSlide>
           <div
             style={{
               backgroundImage: `url('https://auraed.org/assets/images/slider/slider-03.jpg')`,
@@ -91,7 +93,7 @@ function SwiperComp() {
             className="swiper-slide bg-black bg-blend-overlay bg-opacity-40 relative h-[80vh]"
           >
             <div className="flex flex-col container mx-auto pt-5 px-2 h-full md:px-0">
-              <div className="flex h-full flex-col text-white space-y-5 justify-center">
+              <div className="flex h-full flex-col px-5 text-white space-y-5 justify-center">
                 <h1 className="text-4xl max-w-5xl font-bold">
                   Support Children For Education
                 </h1>
@@ -106,8 +108,8 @@ function SwiperComp() {
               </div>
             </div>
           </div>
-        </SwiperSlide>
-      </Swiper>
+        </react.SwiperSlide>
+      </react.Swiper>
 
       <div className="flex justify-between buttons-container container mx-auto relative text-white pb-5 justify-self-end">
         <div className="flex space-x-2 items-end">

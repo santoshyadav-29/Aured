@@ -5,7 +5,7 @@ import SwiperComp from "../../components/home/Swiper.tsx";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="pageAnimation">
       <SwiperComp />
       <div className="story p-4">
         <Programs />
