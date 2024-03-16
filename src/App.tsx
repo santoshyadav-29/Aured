@@ -6,6 +6,7 @@ import Albums from "./pages/albums/Albums";
 import Events from "./pages/events/Events";
 import Donate from "./pages/donate/Donate";
 import Layout from "./layouts/layout";
+import BlogPage from "./pages/blogs/SingleBlog";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/blogs", element: <Blogs /> },
+      { path: "/blogs/:id", element: <BlogPage /> },
       { path: "/about", element: <About /> },
       { path: "/albums", element: <Albums /> },
       { path: "/events", element: <Events /> },

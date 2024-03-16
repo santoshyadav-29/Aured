@@ -1,11 +1,5 @@
-
-
 const Donate = () => {
-  return (
-    <div>
-      Donate    
-    </div>
-  )
-}
+  return <div className="pageAnimation">Donate</div>;
+};
 
-export default Donate
+export default Donate;

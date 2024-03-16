@@ -4,14 +4,16 @@ import SecondaryCover from "../../layouts/secondaryCover";
 
 const About = () => {
   return (
-    <>
+    <div className="">
       <SecondaryCover
         title="About"
         description="We are a non-profit organization focusing on child education with technology."
       />
+      <div className="pageAnimation">
       <AboutUs />
-      <Members />
-    </>
+        <Members />
+        </div>
+    </div>
   );
 };
 

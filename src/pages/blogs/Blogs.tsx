@@ -1,11 +1,8 @@
 import React from "react";
-
-// import { useQuery } from "@tanstack/react-query";
-
 import SecondaryCover from "../../layouts/secondaryCover";
 import PinnedBlogs from "../../components/blogs/PopularBlogs";
 import RecentBlogs from "../../components/blogs/RecentBlogs";
-import { API_URL } from "../../constants/Constant";
+// import { API_URL } from "../../constants/Constant";
 
 interface Blog {
   pinned: boolean;
@@ -16,9 +13,7 @@ interface Blog {
   // other properties of the blog object
 }
 
-interface BlogsResponse {
-  blogs: Blog[];
-}
+
 
 // create a demo dummy data
 const data: Blog[] = [
@@ -82,36 +77,23 @@ const data: Blog[] = [
 ];
 
 const Blogs: React.FC = () => {
-  // const fetchBlogs = async (): Promise<BlogsResponse> => {
-  //   const res = await fetch(`${API_URL}/blogs`);
-  //   return res.json();
-  // };
 
-  // const { isLoading, isError, data } = useQuery<BlogsResponse, Error>(
-  //   ["blogs"],
-  //   fetchBlogs
-  // );
-
-  // if (isLoading) return <div>Loading...</div>;
-  // if (isError) return <div>Error</div>;
-
-  // const blogs = data?.blogs || [];
   const blogs = data || [];
 
   const pinnedBlogs = blogs.filter((blog) => blog.pinned);
   const recentBlogs = blogs.filter((blog) => !blog.pinned);
 
   return (
-    <>
+    <div className="">
       <SecondaryCover
         title="Blogs"
         description="We are a non-profit organization focusing on child education with technology."
       />
-      <div className="story p-4">
+      <div className="story p-4 pageAnimation">
         <PinnedBlogs blogs={pinnedBlogs} />
         <RecentBlogs blogs={recentBlogs} />
       </div>
-    </>
+    </div>
   );
 };
 
