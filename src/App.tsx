@@ -7,6 +7,7 @@ import Events from "./pages/events/Events";
 import Donate from "./pages/donate/Donate";
 import Layout from "./layouts/layout";
 import BlogPage from "./pages/blogs/SingleBlog";
+import Contact from "./pages/contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -23,10 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: (
-          <div>
-            <h1>Contact</h1>
-          
-          </div>
+         <Contact />
         ),
       }
     ],

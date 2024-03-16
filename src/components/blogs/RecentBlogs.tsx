@@ -1,6 +1,5 @@
 import React from "react";
 import readMoreArrow from "../../assets/read-more-arrow.svg";
-import { Link } from "react-router-dom";
 
 interface Blog {
   thumbnail: string;
